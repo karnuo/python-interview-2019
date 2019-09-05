@@ -191,7 +191,11 @@
   答案：
 
   ```SQL
-  
+ select name, 
+ sum(case shuying when '赢' then 1 else 0 end) as 赢, 
+ sum(case shuying when '输' then 1 else 0 end) as 输 
+ from tb_result 
+ group by rq;
   ```
 
 11. 列举出你知道的HTTP请求头选项并说明其作用。
@@ -199,7 +203,10 @@
     答案：
 
     ```
-    请求头
+    1. cookie 比如存储用户的登录信息，购物车的商品等
+    2. User-Agent 
+    3. content type
+    4. 
     ```
 
 12. 阐述JSON Web Token的工作原理和优点。
